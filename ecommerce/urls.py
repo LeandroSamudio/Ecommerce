@@ -18,5 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path("vistaprevia", include("vistaprevia.urls")),
+    path("accounts/", include("registration.backends.default.urls")),
     path("admin/", admin.site.urls),
+    path("usuarios", include("usuarios.urls")),
 ]
