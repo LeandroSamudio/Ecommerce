@@ -20,13 +20,13 @@ class ProductoAdmin(admin.ModelAdmin):
             "Datos generales",
             {
                 "fields": [
-                    'fecha_publicacion', 'producto', 'estado' , 'imagen'
+                    'fecha_publicacion', 'producto', 'estado' , 'imagen', 'precio'
                 ]
             },
         ),
 
     ]
-    list_display = ['producto', 'fecha_publicacion', 'tipo_de_producto', 'imagen', 'upper_case_name']
+    list_display = ['producto', 'fecha_publicacion', 'tipo_de_producto', 'imagen', 'precio']
     ordering = ['-fecha_publicacion']
     list_filter = ('producto', 'fecha_publicacion',)
     search_fields=('producto', 'estado',)

@@ -13,17 +13,18 @@ class Categoria(models.Model):
 
 class Producto(models.Model):
 
-    Borrador = 'Borrador'
-    Publicado = 'Publicado'
-    Retirado = 'Retirado'
+    Borrador = 'En Stock'
+    Publicado = 'Sin Stock'
+    Retirado = 'Sin publicar'
     APROBACION_PRODUCTO = (
-        (Borrador, 'Borrador'),
-        (Publicado, 'Publicado'),
-        (Retirado, 'Retirado'),
+        (Borrador, 'En Stock'),
+        (Publicado, 'Sin Stock'),
+        (Retirado, 'Sin publicar'),
     )
-    estado = models.CharField(max_length=10, choices=APROBACION_PRODUCTO, default='Borrador')
+    estado = models.CharField(max_length=15, choices=APROBACION_PRODUCTO, default='Sin publicar')
 
     producto = models.CharField(max_length=200)
+    precio = models.CharField(max_length=10, null=True, blank=True, default='0')
     fecha_publicacion = models.DateTimeField('Fecha de publicación')
     imagen = models.ImageField(upload_to="producto/%Y/%m/%d", blank=True, null=True) 
     # categoria = models.ManyToManyField(Categoria)    
@@ -32,12 +33,12 @@ class Producto(models.Model):
     )
     
     def tipo_de_producto(self):
-        if self.estado == 'Retirado':
-            return format_html('<span style="color: #f00;">{}</span>', self.estado, )
-        elif self.estado == 'Borrador':
-            return format_html('<span style="background-color: #f0f; padding:7px;">{}</span>', self.estado, )
-        elif self.estado == 'Publicado':
-            return format_html('<span style="color: #099;">{}</span>', self.estado, )
+        if self.estado == 'En Stock':
+            return format_html('<span style="color: #0d0;">{}</span>', self.estado, )
+        elif self.estado == 'Sin Stock':
+            return format_html('<span style="color: #d00;">{}</span>', self.estado, )
+        elif self.estado == 'Sin publicar':
+            return format_html('<span style="color: #00d;">{}</span>', self.estado, )
 
     def __str__(self, ):
         return self.producto + "---" + str(self.fecha_publicacion)
