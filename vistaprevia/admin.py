@@ -2,6 +2,11 @@ from django.contrib import admin
 from vistaprevia.models import Categoria
 from vistaprevia.models import Producto
 
+
+
+admin.site.site_header= "Templo 3D Admin"
+admin.site.site_title= "Tempro 3D Admin"
+admin.site.index_title= "Bienvenido al portal de administracion"
 class ProductoInline(admin.TabularInline):
 
     model = Producto
