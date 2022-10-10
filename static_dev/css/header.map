@@ -5,8 +5,8 @@
 		"../scss/header.scss"
 	],
 	"sourcesContent": [
-		"p {\n  color: #02F520;\n  font-size: 20px;\n  width: 265px;\n  height: 110px;\n}\n\n#mi_parrafo {\n  color: #02F520;\n  background-color: #ff9966;\n}\n\n.color1{background-color:#F0738F;}\n.color2{background-color:#0CF86C;}\n.color3{background-color:#0CACF8;}\n"
+		"p {\r\n    color: #ffaa00; \r\n    font-size: 20px;\r\n    width: 265px;\r\n    height: 110px;\r\n  }\r\n  \r\n  #mi_parrafo {\r\n    color: #02F520;\r\n    background-color: #ffaa00;\r\n  }\r\n\r\n  .color1{background-color:#F0738F;}\r\n  .color2{background-color:#0CF86C;}\r\n  .color3{background-color:#0CACF8;}\r\n   "
 	],
 	"names": [],
-	"mappings": ";AAAA,AAAA,CAAC,CAAC;EACA,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CACd;;;AAED,AAAA,WAAW,CAAC;EACV,KAAK,EAAE,OAAO;EACd,gBAAgB,EAAE,OAAO;CAC1B;;;AAED,AAAA,OAAO,CAAA;EAAC,gBAAgB,EAAC,OAAO;CAAG;;;AACnC,AAAA,OAAO,CAAA;EAAC,gBAAgB,EAAC,OAAO;CAAG;;;AACnC,AAAA,OAAO,CAAA;EAAC,gBAAgB,EAAC,OAAO;CAAG"
+	"mappings": ";AAAA,AAAA,CAAC,CAAC;EACE,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CACd;;;AAED,AAAA,WAAW,CAAC;EACV,KAAK,EAAE,OAAO;EACd,gBAAgB,EAAE,OAAO;CAC1B;;;AAED,AAAA,OAAO,CAAA;EAAC,gBAAgB,EAAC,OAAO;CAAG;;;AACnC,AAAA,OAAO,CAAA;EAAC,gBAAgB,EAAC,OAAO;CAAG;;;AACnC,AAAA,OAAO,CAAA;EAAC,gBAAgB,EAAC,OAAO;CAAG"
 }

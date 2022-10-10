@@ -1,28 +1,28 @@
-/* line 1, ../../Documents/Python/python_virtual/diplo/archivos/librosonline/static_dev/scss/header.scss */
+/* line 1, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
 p {
-  color: #02F520;
+  color: #ffaa00;
   font-size: 20px;
   width: 265px;
   height: 110px;
 }
 
-/* line 8, ../../Documents/Python/python_virtual/diplo/archivos/librosonline/static_dev/scss/header.scss */
+/* line 8, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
 #mi_parrafo {
   color: #02F520;
-  background-color: #ff9966;
+  background-color: #ffaa00;
 }
 
-/* line 13, ../../Documents/Python/python_virtual/diplo/archivos/librosonline/static_dev/scss/header.scss */
+/* line 13, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
 .color1 {
   background-color: #F0738F;
 }
 
-/* line 14, ../../Documents/Python/python_virtual/diplo/archivos/librosonline/static_dev/scss/header.scss */
+/* line 14, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
 .color2 {
   background-color: #0CF86C;
 }
 
-/* line 15, ../../Documents/Python/python_virtual/diplo/archivos/librosonline/static_dev/scss/header.scss */
+/* line 15, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
 .color3 {
   background-color: #0CACF8;
 }
