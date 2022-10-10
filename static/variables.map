@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "variables.css",
+	"sources": [
+		"../static_dev/scss/variables.scss"
+	],
+	"sourcesContent": [
+		" "
+	],
+	"names": [],
+	"mappings": ""
+}

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "header.css",
+	"sources": [
+		"../scss/header.scss"
+	],
+	"sourcesContent": [
+		"p {\n  color: #02F520;\n  font-size: 20px;\n  width: 265px;\n  height: 110px;\n}\n\n#mi_parrafo {\n  color: #02F520;\n  background-color: #ff9966;\n}\n\n.color1{background-color:#F0738F;}\n.color2{background-color:#0CF86C;}\n.color3{background-color:#0CACF8;}\n"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,CAAC,CAAC;EACA,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CACd;;;AAED,AAAA,WAAW,CAAC;EACV,KAAK,EAAE,OAAO;EACd,gBAAgB,EAAE,OAAO;CAC1B;;;AAED,AAAA,OAAO,CAAA;EAAC,gBAAgB,EAAC,OAAO;CAAG;;;AACnC,AAAA,OAAO,CAAA;EAAC,gBAAgB,EAAC,OAAO;CAAG;;;AACnC,AAAA,OAAO,CAAA;EAAC,gBAAgB,EAAC,OAAO;CAAG"
+}

@@ -1,14 +1,201 @@
 <!DOCTYPE html>
+
+{% extends "layout.html" %}
+{% load static %}
+{% block contenedor %}
+
+<style>
+    button {
+        padding: 0;
+        margin: 0;
+           }
+
+    body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: coral;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+</style>
+
 <html>
     <head>
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
-    <body>
+        <body>
 
-        <h1>Hola {{nombre_sitio}}</h1>
-        <h2>Hola</h2>
-        <p>Hola</p>
-        
-    </body>
+         <button type="button">
+            <a href="https://www.facebook.com/templo.3D">
+            <img src="https://www.tuexperto.com/wp-content/uploads/2015/10/facebook-paper-01.jpg" 
+            width="50px"
+            height=50px"
+            alt="">
+         </button>
+         <button type="button">
+              <a href="https://www.instagram.com/templo.3d/">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" 
+           width="50px"
+           height=50px"
+           alt="">
+        </button>
+         <button type="button">
+            <a href="https://ar.pinterest.com/eltemplo3d/">
+             <img src="https://graffica.info/wp-content/uploads/2017/08/badgeRGB.png" 
+           width="50px"
+           height=50px"
+            alt="">
+         </button>
+        </body>
 
 </html>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Oferta por tiempo limitado!!!
+  </button>
+  
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Templo 3D</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre Nosotros</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Servicios
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Diseño 3D</a></li>
+            <li><a class="dropdown-item" href="#">Impresiones 3D</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Catalogo
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Soporte Celulares</a></li>
+              <li><a class="dropdown-item" href="#">Soporte Auriculares</a></li>
+              <li><a class="dropdown-item" href="#">Soporte Joysticks</a></li>
+              <li><a class="dropdown-item" href="#">Soporte Gaming</a></li>
+              <li><a class="dropdown-item" href="#">Soporte Esculturas</a></li>
+              <li><a class="dropdown-item" href="#">Soporte Llaveros</a></li>
+              <li><a class="dropdown-item" href="#">Soporte Mates</a></li>
+              <li><a class="dropdown-item" href="#">Soporte Macetas</a></li>
+              <li><a class="dropdown-item" href="#">Soporte Cortantes</a></li>
+              <li><a class="dropdown-item" href="#">Soporte Decoración</a></li>
+            </ul>
+          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+     <!--   <li class="nav-item">
+       <a class="nav-link disabled">Disabled</a>
+       </li> -->
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+  <div class="container">
+    <div class="row">
+          <div class="col-12 prueba">
+            <h1>Templo 3D</h1><br><br><br>
+            <h3>SOMOS REALISTAS, HACEMOS LO IMPOSIBLE</h2><br>
+            <h3>VISITA NUESTRO CATALOGO ONLINE</h2><br><br>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="C:\Users\Yanina\Desktop\Ecommerce\media\vistaprevia" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Producto en promoción 10% OFF</h5>
+                      <p class="card-text">Soporte para Joystick de Mortal Kombat a sólo $3500.</p>
+                      <a href="#" class="btn btn-primary">Ver ficha de producto</a> 
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="C:\Users\Yanina\Desktop\Ecommerce\media\vistaprevia" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Producto en promoción 15% OFF</h5>
+                      <p class="card-text">Soporte para Joystick de Mortal Kombat a sólo $2000.</p>
+                      <a href="#" class="btn btn-primary">Ver ficha de producto</a> 
+                  </div>
+                  <br><br>
+                  <br><br>
+                <button type="button" class="btn btn-primary" >Ingresar</button><br><br>
+        <!--    <div>div 1</div>
+            <div>div 2</div> 
+            <div>div 3</div>  -->
+            
+          </div>
+      </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">2022</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Envio y Devoluciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Terminos y Condiciones</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQ</a>
+          </li>
+       <!--   <li class="nav-item">
+         <a class="nav-link disabled">Disabled</a>
+         </li> -->
+        </ul>
+        
+      </div>
+    </div>
+    <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">50% de descuento</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Código de descuento "MiPrimeraImpresión3D". Sólo válido para compras por WhatsApp!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Quiero Mi Descuento</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </nav>
+
+
+{% endblock  %}
