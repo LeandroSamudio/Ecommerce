@@ -5,6 +5,12 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 /* line 1, ../Django_templo3d/Ecommerce/static_dev/scss/bootstrap/_root.scss */
+
+#texto_contacto{
+  color: #000;
+  background-color: rgb(12, 248, 185);
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
