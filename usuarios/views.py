@@ -13,3 +13,4 @@ def index(request):
     params["nombre_sitio"] = "Usuario"
     return render(request, "vistaprevia/index.html", params)
     # Create your views here.
+

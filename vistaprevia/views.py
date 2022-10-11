@@ -8,3 +8,10 @@ def index(request):
     params = {}
     params['nombre_sitio'] = 'Libros Online'
     return render(request, 'vistaprevia/index.html', params)
+
+
+def catalog(request):
+    return render(request, "vistaprevia/catalog.html")
+
+def contacto(request):
+    return render(request, "vistaprevia/contacto.html")

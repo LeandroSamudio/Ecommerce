@@ -14,7 +14,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="./">Inicio</a>
           </li>
           
           <li class="nav-item dropdown">
@@ -22,18 +22,25 @@
               Categorias
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Soportes Joystick</a></li>
-              <li><a class="dropdown-item" href="#">Soportes Notebooks</a></li>
-              <li><a class="dropdown-item" href="#">Decoracion</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Ver Todo</a></li>
+                <li><a class="dropdown-item" href="./catalog">Soporte Celulares</a></li>
+                <li><a class="dropdown-item" href="./catalog">Soporte Auriculares</a></li>
+                <li><a class="dropdown-item" href="./catalog">Soporte Joysticks</a></li>
+                <li><a class="dropdown-item" href="./catalog">Soporte Gaming</a></li>
+                <li><a class="dropdown-item" href="./catalog">Soporte Esculturas</a></li>
+                <li><a class="dropdown-item" href="./catalog">Soporte Llaveros</a></li>
+                <li><a class="dropdown-item" href="./catalog">Soporte Mates</a></li>
+                <li><a class="dropdown-item" href="./catalog">Soporte Macetas</a></li>
+                <li><a class="dropdown-item" href="./catalog">Soporte Cortantes</a></li>
+                <li><a class="dropdown-item" href="./catalog">Soporte Decoración</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./catalog">Ver Todo</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link" href="./contacto">Contacto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Imprimi tu Modelo</a>
@@ -43,6 +50,14 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Mi Cuenta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Carrito</a>
+            </li>
+        </ul>
       </div>
     </div>
 </nav>
@@ -54,52 +69,32 @@
 
     {% endblock  %}
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-   
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">2022</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Envio y Devoluciones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Terminos y Condiciones</a>
-              </li>
-             
-              <li class="nav-item">
-                <a class="nav-link" href="#">FAQ</a>
-              </li>
-           <!--   <li class="nav-item">
-             <a class="nav-link disabled">Disabled</a>
-             </li> -->
-            </ul>
-            
-          </div>
-        </div>
-        <!-- Modal -->
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">50% de descuento</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              Código de descuento "MiPrimeraImpresión3D". Sólo válido para compras por WhatsApp!
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-              <button type="button" class="btn btn-primary">Quiero Mi Descuento</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      </nav>
 
     
+    <footer class="bg-light text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <a href="#" class="fa fa-facebook"></a>  
+            <a href="#" class="fa fa-twitter"></a>  
+            <a href="#" class="fa fa-pinterest"></a>  
+            <a href="#" class="fa fa-linkedin"></a>  
+            <a href="#" class="fa fa-instagram"></a>  
+            <a href="#" class="fa fa-youtube"></a>  
+            <a href="#" class="fa fa-google"></a>  
+
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <a class="text-white" href="#">templo3d.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      
 {% endblock  %}

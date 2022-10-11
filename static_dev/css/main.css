@@ -12989,32 +12989,81 @@ fieldset:disabled .btn {
 
 /* COLORES */
 /* line 1, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
-p {
-  color: #ffaa00;
+footer {
+  opacity: 90%;
+}
+
+/* line 6, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
+.fa {
+  padding: 20px;
+  text-align: center;
+  margin: 5px 2px;
   font-size: 20px;
-  width: 265px;
-  height: 110px;
-}
-
-/* line 8, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
-#mi_parrafo {
-  color: #02F520;
-  background-color: #ffaa00;
-}
-
-/* line 13, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
-.color1 {
-  background-color: #F0738F;
+  width: 60px;
 }
 
 /* line 14, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
-.color2 {
-  background-color: #0CF86C;
+.fa-facebook {
+  background: #3B5998;
+  color: white;
 }
 
-/* line 15, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
-.color3 {
-  background-color: #0CACF8;
+/* line 18, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/* line 22, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+/* line 26, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+/* line 30, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/* line 34, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* line 38, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+/* line 43, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
+.fa:hover {
+  opacity: 0.9;
+}
+
+/* line 49, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
+body {
+  padding-top: 57px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-image: url("/media/fondo.jpg");
+  background-position: 50% 50%;
+}
+
+/* line 58, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
+control-label {
+  background-color: #0cf8b9;
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

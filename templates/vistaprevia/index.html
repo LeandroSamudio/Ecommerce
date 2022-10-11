@@ -3,138 +3,55 @@
 {% extends "layout.html" %}
 {% load static %}
 {% block contenedor %}
-<!-- Button trigger modal 
-<style>
-    button {
-        padding: 0;
-        margin: 0;
-           }
 
-    body {
-  margin: 0;
-  font-family: var(--bs-body-font-family);
-  font-size: var(--bs-body-font-size);
-  font-weight: var(--bs-body-font-weight);
-  line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
-  text-align: var(--bs-body-text-align);
-  background-color: coral;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        }
-
-</style>
--->
-
-<div class="col-12" >
-			<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-			  <div class="carousel-indicators">
-			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-			  </div>
-			  <div class="carousel-inner">
-			    <div class="carousel-item active">
-			      <img src="/media/mascotas1.jpg" class="d-block w-100" alt="...">
-			      <div class="carousel-caption d-none d-md-block">
-			        <h5>First slide label</h5>
-			        <p>Some representative placeholder content for the first slide.</p>
-			      </div>
-			    </div>
-			    <div class="carousel-item">
-			      <img src="/media/mascotas3.jpg" class="d-block w-100" alt="...">
-			      <div class="carousel-caption d-none d-md-block">
-			        <h5>Second slide label</h5>
-			        <p>Some representative placeholder content for the second slide.</p>
-			      </div>
-			    </div>
-			    <div class="carousel-item">
-			      <img src="/media/mascotas2.jpg" class="d-block w-100" alt="...">
-			      <div class="carousel-caption d-none d-md-block">
-			        <h5>Third slide label</h5>
-			        <p>Some representative placeholder content for the third slide.</p>
-			      </div>
-			    </div>
-			  </div>
-			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			    <span class="visually-hidden">Previous</span>
-			  </button>
-			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			    <span class="visually-hidden">Next</span>
-			  </button>
-			</div>
-		</div>
-
-
-
-
-   
-
-         <button type="button">
-            <a href="https://www.facebook.com/templo.3D">
-            <img src="https://www.tuexperto.com/wp-content/uploads/2015/10/facebook-paper-01.jpg" 
-            width="50px"
-            height=50px"
-            alt="">
-         </button>
-         <button type="button">
-              <a href="https://www.instagram.com/templo.3d/">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" 
-           width="50px"
-           height=50px"
-           alt="">
-        </button>
-         <button type="button">
-            <a href="https://ar.pinterest.com/eltemplo3d/">
-             <img src="https://graffica.info/wp-content/uploads/2017/08/badgeRGB.png" 
-           width="50px"
-           height=50px"
-            alt="">
-         </button>
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Oferta por tiempo limitado!!!
-  </button>
-  
-
+<main>
   <div class="container">
-    <div class="row">
-          <div class="col-12 prueba">
-            <h1>Templo 3D</h1><br><br><br>
-            <h3>SOMOS REALISTAS, HACEMOS LO IMPOSIBLE</h2><br>
-            <h3>VISITA NUESTRO CATALOGO ONLINE</h2><br><br>
-
-                <div class="card" style="width: 18rem;">
-                    <img src="..."class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Producto en promoción 10% OFF</h5>
-                      <p class="card-text">Soporte para Joystick de Mortal Kombat a sólo $3500.</p>
-                      <a href="#" class="btn btn-primary">Ver ficha de producto</a> 
-                  </div>
-                  <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Producto en promoción 15% OFF</h5>
-                      <p class="card-text">Soporte para Joystick de Mortal Kombat a sólo $2000.</p>
-                      <a href="#" class="btn btn-primary">Ver ficha de producto</a> 
-                  </div>
-                  <br><br>
-                  <br><br>
-                <button type="button" class="btn btn-primary" >Ingresar</button><br><br>
-        <!--    <div>div 1</div>
-            <div>div 2</div> 
-            <div>div 3</div>  -->
-            
-          </div>
+  <div class="col-12" >
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/media/Gif1.gif" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>SOMOS REALISTAS, HACEMOS LO IMPOSIBLE</h5>
+            <p>VISITA NUESTRO CATALOGO ONLINE.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/media/Gif2.gif" class="w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>SOMOS REALISTAS, HACEMOS LO IMPOSIBLE</h5>
+            <p>VISITA NUESTRO CATALOGO ONLINE</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/media/Gif3.gif" class="w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>SOMOS REALISTAS, HACEMOS LO IMPOSIBLE</h5>
+            <p>VISITA NUESTRO CATALOGO ONLINE </p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
   </div>
-
-
-
-
+</div>
 
 {% endblock  %}
