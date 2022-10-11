@@ -13039,8 +13039,8 @@ footer {
 }
 
 /* line 38, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
-.fa-google {
-  background: #dd4b39;
+.fa-whatsapp {
+  background: #25D366;
   color: white;
 }
 
@@ -13058,12 +13058,6 @@ body {
   background-size: cover;
   background-image: url("/media/fondo.jpg");
   background-position: 50% 50%;
-}
-
-/* line 58, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
-control-label {
-  background-color: #0cf8b9;
-  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

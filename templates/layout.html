@@ -52,10 +52,14 @@
         </form>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="#">Mi Cuenta</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Mi Carrito
+                  </button>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Carrito</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSignin">
+                    Mi Cuenta
+                  </button>
             </li>
         </ul>
       </div>
@@ -63,6 +67,67 @@
 </nav>
 
 
+  <!-- Modal -->
+  <div class="modal fade" id="modalSignin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-5 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <!-- <h5 class="modal-title">Modal title</h5> -->
+            <h2 class="fw-bold mb-0">Sign up for free</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+    
+          <div class="modal-body p-5 pt-0">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
+              <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+              <hr class="my-4">
+              <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+              <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
+                Sign up with Twitter
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
+                Sign up with Facebook
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
+                Sign up with GitHub
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     {% block contenedor %}
 
@@ -71,18 +136,18 @@
 
 
     
-    <footer class="bg-light text-center text-white">
+    <footer class="bg-light text-center text-white sticky-bottom">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
           <!-- Section: Social media -->
           <section class="mb-4">
-            <a href="#" class="fa fa-facebook"></a>  
-            <a href="#" class="fa fa-twitter"></a>  
-            <a href="#" class="fa fa-pinterest"></a>  
-            <a href="#" class="fa fa-linkedin"></a>  
-            <a href="#" class="fa fa-instagram"></a>  
-            <a href="#" class="fa fa-youtube"></a>  
-            <a href="#" class="fa fa-google"></a>  
+            <a href="https://www.facebook.com/eltemplo3D" class="fa fa-facebook"></a>  
+            <a href="https://twitter.com/Templo3d" class="fa fa-twitter"></a>  
+            <a href="https://ar.pinterest.com/eltemplo3d/" class="fa fa-pinterest"></a>  
+            <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>  
+            <a href="https://www.instagram.com/templo.3d/" class="fa fa-instagram"></a>  
+            <a href="https://www.youtube.com/channel/UCh9wd65mMKz_5snXxeFhxcQ/featured?view_as=subscriber" class="fa fa-youtube"></a>  
+            <a href="https://api.whatsapp.com/send/?phone=5491133091230&text&type=phone_number&app_absent=0" class="fa fa-whatsapp"></a>  
 
           </section>
           <!-- Section: Social media -->
@@ -98,3 +163,8 @@
       </footer>
       
 {% endblock  %}
+
+
+
+
+
