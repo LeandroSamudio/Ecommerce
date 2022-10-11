@@ -15,3 +15,7 @@ def catalog(request):
 
 def contacto(request):
     return render(request, "vistaprevia/contacto.html")
+
+
+def imprimitumodelo(request):
+    return render(request, "vistaprevia/imprimitumodelo.html")

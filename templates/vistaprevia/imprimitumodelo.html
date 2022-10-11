@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+{% extends "layout.html" %}
+{% load static %}
+{% block contenedor %}
+
+
+<div class="container-fluid col-sm-10">
+
+    <div class="h1" id="texto_contacto">
+        Pasanos tu propio modelo.
+    </div>
+
+    <form class="form-horizontal" action="#">
+        <div class="form-group">
+          <label class="control-label col-sm-1" id="texto_contacto" for="nombre">Nombre:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombre">
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-1" id="texto_contacto" for="apellido">Apellido:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="apellido" placeholder="Ingrese apellido">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-1" id="texto_contacto" for="email">Email:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Ingrese email">
+            </div>
+          </div>
+
+        <!-- <div class="form-group">
+          <label class="control-label col-sm-2" for="consulta">Consulta:</label>
+          <div class="textarea col-sm-10">
+            <input type="textarea" class="form-control" id="consulta" placeholder="Deja tu consulta aca ">
+          </div>
+        </div> -->
+        
+        <div class="form-group">
+            <label class="control-label col-sm-1" id="texto_contacto" for="comentario">Comentario:</label>
+            <div class="textarea col-sm-10">
+              <textarea type="textarea" rows="5" style="resize: none;" class="form-control" id="comentario" placeholder="Deja tu comentario aca"></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <label class="control-label col-sm-2" id="texto_contacto" for="archivo">Dejanos tu archivo:</label>
+          <input type="file">
+      </div>
+        
+        <br>
+      </form>
+
+
+
+</div>
+
+{% endblock  %}
