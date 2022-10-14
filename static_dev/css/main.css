@@ -6,7 +6,7 @@
  */
 /* line 1, ../Django_templo3d/Ecommerce/static_dev/scss/bootstrap/_root.scss */
 
-#texto_contacto{
+.texto_contacto {
   color: #000;
   background-color: rgb(12, 248, 185);
 }
