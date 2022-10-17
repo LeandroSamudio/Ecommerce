@@ -13099,4 +13099,9 @@ body {
 #modalnavbotones{
   margin-right: 1rem;
 }
+
+.animacion:hover{
+  transition: color 1s ease;
+
+}
 /*# sourceMappingURL=main.css.map */
