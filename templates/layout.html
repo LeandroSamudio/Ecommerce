@@ -3,111 +3,114 @@
 
 {% block content %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="opacity: 90%;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-          <img src="/media/temploicon.png" alt="" width="30" height="30"> Templo3D
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./">Inicio</a>
-          </li>
+<div class="conteiner-fluid navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <a class="navbar-brand" href="#">
+    <img src="/media/temploicon.png" alt="" width="30" height="30"> Templo3D
+  </a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="./">Inicio</a>
+      </li>
           
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorias
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="./catalog">Soporte Celulares</a></li>
-                <li><a class="dropdown-item" href="./catalog">Soporte Auriculares</a></li>
-                <li><a class="dropdown-item" href="./catalog">Soporte Joysticks</a></li>
-                <li><a class="dropdown-item" href="./catalog">Soporte Gaming</a></li>
-                <li><a class="dropdown-item" href="./catalog">Soporte Esculturas</a></li>
-                <li><a class="dropdown-item" href="./catalog">Soporte Llaveros</a></li>
-                <li><a class="dropdown-item" href="./catalog">Soporte Mates</a></li>
-                <li><a class="dropdown-item" href="./catalog">Soporte Macetas</a></li>
-                <li><a class="dropdown-item" href="./catalog">Soporte Cortantes</a></li>
-                <li><a class="dropdown-item" href="./catalog">Soporte Decoración</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="./catalog">Ver Todo</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./contacto">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./imprimitumodelo">Imprimi tu Modelo</a>
-          </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
+
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="./catalog">Soporte Celulares</a></li>
+          <li><a class="dropdown-item" href="./catalog">Soporte Auriculares</a></li>
+          <li><a class="dropdown-item" href="./catalog">Soporte Joysticks</a></li>
+          <li><a class="dropdown-item" href="./catalog">Soporte Gaming</a></li>
+          <li><a class="dropdown-item" href="./catalog">Soporte Esculturas</a></li>
+          <li><a class="dropdown-item" href="./catalog">Soporte Llaveros</a></li>
+          <li><a class="dropdown-item" href="./catalog">Soporte Mates</a></li>
+          <li><a class="dropdown-item" href="./catalog">Soporte Macetas</a></li>
+          <li><a class="dropdown-item" href="./catalog">Soporte Cortantes</a></li>
+          <li><a class="dropdown-item" href="./catalog">Soporte Decoración</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="./catalog">Ver Todo</a></li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Mi Carrito
-                  </button>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSignin">
-                    Mi Cuenta
-                  </button>
-            </li>
-        </ul>
-      </div>
-    </div>
-</nav>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Nosotros</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="./contacto">Contacto</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="./imprimitumodelo">Imprimi tu Modelo</a>
+      </li>
+    </ul>
+
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Mi Carrito</button>
+      </li>
+
+      <li class="nav-item">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSignin">Mi Cuenta</button>
+      </li>
+    </ul>
+  </div>
+    
+</div>
 
 
   <!-- Modal -->
-  <div class="modal fade" id="modalSignin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content rounded-5 shadow">
-          <div class="modal-header p-5 pb-4 border-bottom-0">
-            <!-- <h5 class="modal-title">Modal title</h5> -->
-            <h2 class="fw-bold mb-0">Sign up for free</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-    
-          <div class="modal-body p-5 pt-0">
-            <form class="">
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>
-              </div>
-              <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
-              <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
-              <hr class="my-4">
-              <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-              <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
-                <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
-                Sign up with Twitter
-              </button>
-              <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
-                <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
-                Sign up with Facebook
-              </button>
-              <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
-                <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
-                Sign up with GitHub
-              </button>
-            </form>
-          </div>
-        </div>
+<div class="modal fade" id="modalSignin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-5 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <!-- <h5 class="modal-title">Modal title</h5> -->
+        <h2 class="fw-bold mb-0">Sign up for free</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+    
+      <div class="modal-body p-5 pt-0">
+        <form class="">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+
+          <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
+          <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+          <hr class="my-4">
+          <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+          <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+          <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>Sign up with Twitter</button>
+          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+            <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
+            Sign up with Facebook
+          </button>
+
+          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+            <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
+            Sign up with GitHub
+          </button>
+        </form>
+      </div>
+    </div>
   </div>
+</div>
 
 
   <!-- Modal -->
@@ -135,34 +138,26 @@
     {% endblock  %}
 
 
-    <div class="container-fuid" style="margin-bottom: 170px;">
-    <footer class="bg-light text-center text-white fixed-bottom"'>
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-          <!-- Section: Social media -->
-          <section class="mb-4 ">
-            <a href="https://www.facebook.com/eltemplo3D" class="fa fa-facebook"></a>  
-            <a href="https://twitter.com/Templo3d" class="fa fa-twitter"></a>  
-            <a href="https://ar.pinterest.com/eltemplo3d/" class="fa fa-pinterest"></a>  
-            <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>  
-            <a href="https://www.instagram.com/templo.3d/" class="fa fa-instagram"></a>  
-            <a href="https://www.youtube.com/channel/UCh9wd65mMKz_5snXxeFhxcQ/featured?view_as=subscriber" class="fa fa-youtube"></a>  
-            <a href="https://api.whatsapp.com/send/?phone=5491133091230&text&type=phone_number&app_absent=0" class="fa fa-whatsapp"></a>  
-
-          </section>
-          <!-- Section: Social media -->
-        
-        <!-- Grid container -->
-      
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2022 Copyright:
-          <a class="text-white" href="#">templo3d.com</a>
-        </div>
-      </div>
-        <!-- Copyright -->
-      </footer>
+<div id="footer" class="footer bg-light text-center text-white fixed-bottom">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+  <!-- Section: Social media -->
+    <section class="mb-4 ">
+      <a href="https://www.facebook.com/eltemplo3D" class="fa fa-facebook"></a>  
+      <a href="https://twitter.com/Templo3d" class="fa fa-twitter"></a>  
+      <a href="https://ar.pinterest.com/eltemplo3d/" class="fa fa-pinterest"></a>  
+      <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>  
+      <a href="https://www.instagram.com/templo.3d/" class="fa fa-instagram"></a>  
+      <a href="https://www.youtube.com/channel/UCh9wd65mMKz_5snXxeFhxcQ/featured?view_as=subscriber" class="fa fa-youtube"></a>  
+      <a href="https://api.whatsapp.com/send/?phone=5491133091230&text&type=phone_number&app_absent=0" class="fa fa-whatsapp"></a>  
+    </section>
+      <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+        <a class="text-white" href="#">templo3d.com</a>
     </div>
+  </div>
+</div>
       
 {% endblock  %}
 
