@@ -13063,6 +13063,12 @@ body {
   background-size: cover;
   background-image: url("/media/fondo.jpg");
   background-position: 50% 50%;
+  background: linear-gradient(320deg ,#B53FFF,#6E2EE8,#4233FF) ;
 }
+
+.Botonmodalcuenta{
+  margin-left: 10px;
+}
+
 
 /*# sourceMappingURL=main.css.map */
