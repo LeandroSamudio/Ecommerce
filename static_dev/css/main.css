@@ -13063,12 +13063,33 @@ body {
   background-size: cover;
   background-image: url("/media/fondo.jpg");
   background-position: 50% 50%;
-  background: linear-gradient(320deg ,#B53FFF,#6E2EE8,#4233FF) ;
+  background: linear-gradient(320deg ,#ffc107,#B53FFF,#6E2EE8,#4233FF) ;
 }
-
+/* Nuestras modificaciones de css */
 .Botonmodalcuenta{
   margin-left: 10px;
 }
 
+#footer{
+  padding-top: 15px;
+  margin-top: 0px;
+}
 
+#section-footer{
+  height: 3rem;
+  padding-top: 0rem;
+  margin-top: 0px;
+}
+
+.fa{
+  margin-top: 0px;
+}
+
+.mostrar{
+  border: 5px #651486 solid;
+}
+
+#copyrigth{
+  background-color: rgba(26, 26, 26, 0.7);
+}
 /*# sourceMappingURL=main.css.map */
