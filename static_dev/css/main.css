@@ -13058,12 +13058,15 @@ footer {
 /* line 49, ../Django_templo3d/Ecommerce/static_dev/scss/header.scss */
 body {
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 54rem;
   margin: 0 auto;
   background-size: cover;
   background-image: url("/media/fondo.jpg");
   background-position: 50% 50%;
   background: linear-gradient(320deg ,#ffc107,#B53FFF,#6E2EE8,#4233FF) ;
+  
+
 }
 /* Nuestras modificaciones de css */
 .Botonmodalcuenta{
