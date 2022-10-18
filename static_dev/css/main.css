@@ -7470,6 +7470,7 @@ fieldset:disabled .btn {
   margin-bottom: 1rem;
   margin-left: 15%;
   list-style: none;
+  
 }
 
 /* line 173, ../Django_templo3d/Ecommerce/static_dev/scss/bootstrap/_carousel.scss */
@@ -13065,7 +13066,7 @@ body {
   background-image: url("/media/fondo.jpg");
   background-position: 50% 50%;
   background: linear-gradient(320deg ,#ffc107,#B53FFF,#6E2EE8,#4233FF) ;
-  
+  padding-bottom: 7rem;
 
 }
 /* Nuestras modificaciones de css */
@@ -13076,6 +13077,7 @@ body {
 #footer{
   padding-top: 15px;
   margin-top: 0px;
+  bottom: 0;
 }
 
 #section-footer{
@@ -13104,4 +13106,5 @@ body {
   transition: color 1s ease;
 
 }
+
 /*# sourceMappingURL=main.css.map */
