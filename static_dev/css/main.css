@@ -13082,6 +13082,7 @@ body {
 
 .fa{
   margin-top: 0px;
+  transition: color 1s ease;
 }
 
 .mostrar{
@@ -13097,7 +13098,8 @@ body {
 }
 
 .animacion:hover{
-  transition: color 1s ease;
+  color: #000;
+  
 
 }
 

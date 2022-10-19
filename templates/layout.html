@@ -16,25 +16,25 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="./">Inicio</a>
+        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
       </li>
           
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
 
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="./catalog">Soporte Celulares</a></li>
-          <li><a class="dropdown-item" href="./catalog">Soporte Auriculares</a></li>
-          <li><a class="dropdown-item" href="./catalog">Soporte Joysticks</a></li>
-          <li><a class="dropdown-item" href="./catalog">Soporte Gaming</a></li>
-          <li><a class="dropdown-item" href="./catalog">Soporte Esculturas</a></li>
-          <li><a class="dropdown-item" href="./catalog">Soporte Llaveros</a></li>
-          <li><a class="dropdown-item" href="./catalog">Soporte Mates</a></li>
-          <li><a class="dropdown-item" href="./catalog">Soporte Macetas</a></li>
-          <li><a class="dropdown-item" href="./catalog">Soporte Cortantes</a></li>
-          <li><a class="dropdown-item" href="./catalog">Soporte Decoración</a></li>
+          <li><a class="dropdown-item" href="{% url 'catalog' %}">Soporte Celulares</a></li>
+          <li><a class="dropdown-item" href="{% url 'catalog' %}">Soporte Auriculares</a></li>
+          <li><a class="dropdown-item" href="{% url 'catalog' %}">Soporte Joysticks</a></li>
+          <li><a class="dropdown-item" href="{% url 'catalog' %}">Soporte Gaming</a></li>
+          <li><a class="dropdown-item" href="{% url 'catalog' %}">Soporte Esculturas</a></li>
+          <li><a class="dropdown-item" href="{% url 'catalog' %}">Soporte Llaveros</a></li>
+          <li><a class="dropdown-item" href="{% url 'catalog' %}">Soporte Mates</a></li>
+          <li><a class="dropdown-item" href="{% url 'catalog' %}">Soporte Macetas</a></li>
+          <li><a class="dropdown-item" href="{% url 'catalog' %}">Soporte Cortantes</a></li>
+          <li><a class="dropdown-item" href="{% url 'catalog' %}">Soporte Decoración</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="./catalog">Ver Todo</a></li>
+          <li><a class="dropdown-item" href="{% url 'catalog' %}">Ver Todo</a></li>
         </ul>
       </li>
 
@@ -43,11 +43,11 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="./contacto">Contacto</a>
+        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="./imprimitumodelo">Imprimi tu Modelo</a>
+        <a class="nav-link" href="{% url 'imprimitumodelo' %}">Imprimi tu Modelo</a>
       </li>
     </ul>
 
