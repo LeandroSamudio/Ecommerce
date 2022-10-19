@@ -1,5 +1,5 @@
 import pytest
-from vistaprevia.models import Producto
+from productos.models import Producto
 from django.contrib.auth.models import User
 import datetime
 

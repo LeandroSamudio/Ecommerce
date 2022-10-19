@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # apps terceros
+    
     # mis apps
+    "productos.apps.ProductosConfig",
     "vistaprevia.apps.VistapreviaConfig",
     "usuarios.apps.UsuariosConfig",
 ]

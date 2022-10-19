@@ -1,6 +1,6 @@
 import factory
-from vistaprevia.models import Categoria
-from vistaprevia.models import Producto
+from productos.models import Categoria
+from productos.models import Producto
 from django.contrib.auth.models import User
 import datetime
 from datetime import date

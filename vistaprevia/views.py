@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
+from django.db.models import Q
+from productos.models import Producto
 """
 def index(request):
     return HttpResponse("Hola Mundo!")
