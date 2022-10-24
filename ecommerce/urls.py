@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path("vistaprevia/", include("vistaprevia.urls")),
+    path("", include("vistaprevia.urls")),
     path("accounts/", include("registration.backends.default.urls")),
     path("admin/", admin.site.urls),
     path("captcha/", include('captcha.urls')),

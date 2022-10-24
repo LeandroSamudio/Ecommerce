@@ -29,4 +29,3 @@ class ConsultaForm(ModelForm):
         # logica de envio de mail
 
 
-
