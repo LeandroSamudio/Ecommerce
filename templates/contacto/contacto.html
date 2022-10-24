@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+
+
+
+{% block title %}Contacto{% endblock %}
+
+{% load i18n %}
+{% block contenedor %}
+<!-- ---------------------------------------------------------------------------
+-------------- 
+------------------------------------------------------------------------------->
+ <div class="container">
+
+</div> 
+     
+ <div class="container-fluid"   >
+    <div class="row reflexion justify-content-around align-items-center" style="padding-top:20px;">   
+        <div class="col-12 col-md-5 contacto_form" style="padding-bottom:15px;">
+                    <h1 class="h1juan" style="padding-left:15px;">Contacto</h1>    
+                    <form id="contact" action="" method="post" class="col-xs-12">{% csrf_token %} 		
+                        <div class="col-12 form-group" >
+                            {{form}}
+                        </div> 
+                        <div class="row justify-content-between">
+                            <div class="col-4"></div>
+                            <div class="col-4" style="padding-right:30px;">
+                                <button type="submit"  class=" col-12 btn btn-danger">Enviar</button>
+                            </div>
+                        </div>                        
+                    </form>
+        </div>    
+         
+     </div>
+ </div>  
+
+    
+<section class="container-fluid ">
+    <div class="row" style="padding-top:10px; ">
+        <div class="col-12" style="padding:0px;  ">
+           <br/> 
+        </div>
+    </div>
+</section>
+   
+  
+
+
+
+{% endblock %}
+{% block javascript %}
+<script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script> 
+<script type="text/javascript" src="{% static 'js/juan_ajax.js' %}"></script>
+
+ 
+     
+
+	<script>
+		$("#id_fecha").css({'display':'none'});
+		//$("#id_fecha").parent().find("label").css({'display':'none'});
+		$("#id_estado_respuesta").css({'display':'none'});
+		$("#id_estado_respuesta").parent().find("label").css({'display':'none'});
+		
+		
+		$("#formulario_contacto li").css({'list-style':'none'});
+ 
+		//$("#formulario_contacto li label").css({'width':"100%", 'text-align':'center',});
+		//$("#formulario_contacto li input").css({'width':"100%", 'text-align':'center',});
+
+		$("input").css({'width':"100%", 'text-align':'center', 'margin-bottom':'7px'});
+		$("textarea").css({'width':"100%", 'text-align':'center',});
+
+
+		$("#id_nombre").attr("placeholder", "Nombre");
+		$("#id_descripcion").attr("placeholder", "Descripcion");
+		$("#id_mail").attr("placeholder", "Mail");
+		$("#id_telefono").attr("placeholder", "Teléfono");
+		$("#id_captcha_1").attr("placeholder", "Captcha");
+	</script>
+	
+	
+	
+	
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %}UTN Haedo - MENSAJE ENVIADO{% endblock %}
+{% load static %}
+{% load i18n %}
+{% block contenedor %}
+<!-- ---------------------------------------------------------------------------
+-------------- 
+------------------------------------------------------------------------------->
+ 
+<div class="container-fluid  "   >
+    <div class="row reflexion justify-content-center align-items-center  " style="padding-top:20px;">   
+        <div class="col-8  " style="padding-top:40px; padding-bottom: 40px;">
+            <div>
+                <center>
+                    <h1 style="color:red;">MUCHAS GRACIAS!<i class="fas fa-star"></i></h1>
+                    <p>En breve<b>se van a contactar con vos</b> para coordinar!</p>
+                    <p>Mientras tanto te invitamos a ver todos nuestros productos en la <b style="color:red;">tienda minorista</b></p>
+ 
+                </center>    
+            </div>
+        </div>  
+     </div>
+ </div>
+  
+
+    
+<section class="container-fluid ">
+    <div class="row" style="padding-top:10px; ">
+        <div class="col-12" style="padding:0px;  ">
+           <br/> 
+        </div>
+    </div>
+</section>
+   
+  
+
+
+
+{% endblock %}
+{% block javascript %}
+    <script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/juan_ajax.js' %} " ></script>
+{% endblock %}
