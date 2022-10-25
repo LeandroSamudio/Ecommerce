@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "productos.apps.ProductosConfig",
     "vistaprevia.apps.VistapreviaConfig",
     "usuarios.apps.UsuariosConfig",
+    "tienda.apps.TiendaConfig",
 ]
 
 MIDDLEWARE = [
