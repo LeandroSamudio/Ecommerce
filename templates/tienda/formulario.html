@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block contenedor %}
+<div class="container">
+    <div class="row">
+
+        <div class="col-12">
+
+            
+            <form action="/tienda/cargar/" method="post" enctype="multipart/form-data">{% csrf_token %}
+                <label for="id_producto">Producto:</label>
+                <input type="text" name="producto" maxlength="200" required="" id="id_producto">
+
+                <label for="id_fecha_publicacion">Fecha de publicación:</label>
+                <input type="date" name="fecha_publicacion" required="" id="id_fecha_publicacion">
+
+                <label for="id_imagen">Imagen:</label>
+                <input type="file" name="imagen" accept="image/*" id="id_imagen">
+
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+{% endblock  %}
+{% block script %}
+    <script src="{% static 'js/jquery.js' %}"></script> 
+    <script>
+        $('#id_fecha_publicacion').datepicker({
+            inline:true
+        })
+    </script>
+
+{% endblock %}
