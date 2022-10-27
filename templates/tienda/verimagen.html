@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block contenedor %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>El id de la imagen es: {{producto.id}}</h1>
+            <img src="/media/{{producto.imagen}}" width="20%"/>
+            <a href="{% url 'verimagenes' %}">Ir a tienda</a>
+        </div>
+    </div>
+  </div>
+{% endblock  %}
