@@ -2,11 +2,75 @@
 {% load static %}
 {% block contenedor %}
 
+<script type="text/javascript" src={% static "js/jquery.js" %}></script>
+<div class="container">
+    <div class="row" >
+        <div class="col-12 color1" style="padding-top: 70px;">
+            <h1>Estoy en templatetags</h1>     
+            {% autoescape on %}
+                {{ cross_site_scripting }}
+            {% endautoescape %}
+            
+
+        </div>
+    </div>
+</div>
 
 <div class="container">
     <div class="row" >
-        <div class="col color1">
-            <h1>Estoy en templatetags</h1>               
+        <div class="col-12 color1" style="padding-top: 70px;">
+            <h1>Hola estoy trabajando con comentarios</h1>     
+                <!--
+                    Esto es un comentario
+                -->
+                <p>Rendered text with {{ fecha_de_hoy }}</p>
+                {% comment "Por motivo x" %}
+                    <p>este es un comentario {{ fecha_de_hoy }}</p>
+                {% endcomment %}
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" >
+        <div class="col-12 color1" style="padding-top: 70px;">
+            <h1>Hola estoy viendo cycle</h1>     
+            <ul>
+                {% for elemento in mi_lista %}
+                <li class="{% cycle 'row1' 'row2' row3 %}">
+                    {{elemento}}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" >
+        <div class="col-12 color1" style="padding-top: 70px;">
+            <h1>Hola estoy viendo listas vacias</h1>     
+            <ul>
+                {% for elemento in mi_lista2 %}
+                <li class="{% cycle 'row1' 'row2' row3 %}">
+                    {{elemento}}
+                </li>
+                {% empty %}
+                <li class="{% cycle 'row1' 'row2' row3 %}">
+                    No existen elementos
+                </li>
+
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" >
+        <div class="col-12 color1" style="padding-top: 70px;">
+            <br>
         </div>
     </div>
 </div>

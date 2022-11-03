@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -5,6 +6,7 @@ from django.db.models import Q
 from productos.models import Producto
 
 from django.views.generic import View
+import datetime
 """
 def index(request):
     return HttpResponse("Hola Mundo!")
@@ -29,6 +31,19 @@ class Templatetags1(View):
     template = "vistaprevia/templatetags1.html"
     def get(self, request):
         params = {}
+        params["cross_site_scripting"]="""
+            <script>$("*").css({
+                "background-color": "yellow",
+                "font-weight": "bolder",
+            });
+            </script>
+        """
+
+        params["fecha_de_hoy"]=datetime.datetime.now()
+        params["mi_lista"]=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+        params["row3"]="row3"
+        params["mi_lista2"]=[]
+
         return render(request, self.template, params)
 
     
