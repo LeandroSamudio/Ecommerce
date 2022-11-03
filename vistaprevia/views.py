@@ -3,6 +3,8 @@ from django.http import HttpResponse
 
 from django.db.models import Q
 from productos.models import Producto
+
+from django.views.generic import View
 """
 def index(request):
     return HttpResponse("Hola Mundo!")
@@ -22,3 +24,12 @@ def contacto(request):
 
 def imprimitumodelo(request):
     return render(request, "vistaprevia/imprimitumodelo.html")
+
+class Templatetags1(View):
+    template = "vistaprevia/templatetags1.html"
+    def get(self, request):
+        params = {}
+        return render(request, self.template, params)
+
+    
+
