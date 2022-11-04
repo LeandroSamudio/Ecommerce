@@ -94,7 +94,9 @@
                 <div class="card-body">
                     <h5 class="card-title">{{producto.producto}}</h5>
                     <p class="card-text">{{producto.descripcion|slice:":95"}}</p>
+                    {% if request.session.el_pedido %}
                     <span>{{producto|en_pedido:request.session.el_pedido}}</span>
+                    {% endif %}
                     <hr/>
                     <form action="/templatetags1" method="post">{% csrf_token %}
                         <input hidden type="text" name="producto" value="{{producto.id}}">
