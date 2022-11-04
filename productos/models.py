@@ -21,7 +21,9 @@ class Producto(models.Model):
         (Publicado, 'Sin Stock'),
         (Retirado, 'Sin publicar'),
     )
-    estado = models.CharField(max_length=15, choices=APROBACION_PRODUCTO, default='Sin publicar')
+    estado = models.CharField(
+        max_length=15, choices=APROBACION_PRODUCTO, default='Sin publicar'
+        )
 
     producto = models.CharField(max_length=200)
     precio = models.CharField(max_length=10, null=True, blank=True, default='0')
@@ -31,8 +33,14 @@ class Producto(models.Model):
     categoria = models.ForeignKey(
         Categoria, blank=False, null=True, on_delete=models.CASCADE
     )
+
+    stock = models.IntegerField(default=0)
+    descripcion = models.TextField( default="")
+    precio = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
+    descuento = models.IntegerField(default=0)
+
     
-    def tipo_de_producto(self):
+    def tipo_de_estado(self):
         if self.estado == 'En Stock':
             return format_html('<span style="color: #0d0;">{}</span>', self.estado, )
         elif self.estado == 'Sin Stock':

@@ -70,6 +70,48 @@
 <div class="container">
     <div class="row" >
         <div class="col-12 color1" style="padding-top: 70px;">
+            <h1>Hola estoy viendo filtros</h1>     
+
+            {% filter force_escape|lower %}
+                ESTO TIENE QUE ESTAR EN MINUSCULA
+            {% endfilter %}
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" >
+        <div class="col-12 color1" style="padding-top: 70px;">
+            <h1>Vpy a ver el uso de Session</h1>     
+        </div>
+            
+        {% for producto in los_productos %}
+        <div class="col-12 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/media/{{producto.imagen}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{producto.producto}}</h5>
+                    <p class="card-text">{{producto.descripcion|slice:":95"}} 
+                    </p>
+                    <hr/>
+                    <form action="/templatetags1" method="post">{% csrf_token %}
+                        <input hidden type="text" name="producto" value="{{producto.id}}">
+                        <input type="submit" class="float-rigth  btn btn-primary" value="Agregar"/>
+
+                  </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include "descripcion_lateral.html" with nombre="Juan" apellido="Barreto" %}
+
+<div class="container">
+    <div class="row" >
+        <div class="col-12 color1" style="padding-top: 70px;">
             <br>
         </div>
     </div>

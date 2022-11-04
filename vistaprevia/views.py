@@ -7,6 +7,8 @@ from productos.models import Producto
 
 from django.views.generic import View
 import datetime
+
+from django.shortcuts import redirect
 """
 def index(request):
     return HttpResponse("Hola Mundo!")
@@ -38,6 +40,11 @@ class Templatetags1(View):
             });
             </script>
         """
+        producto = Producto.objects.filter(
+            Q(estado="Sin publicar")
+        )
+        params["los_productos"]=producto
+
 
         params["fecha_de_hoy"]=datetime.datetime.now()
         params["mi_lista"]=[1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -46,5 +53,24 @@ class Templatetags1(View):
 
         return render(request, self.template, params)
 
-    
+    def post(self, request):
+        params={}
+        producto=request.POST.get("producto")
+        el_pedido = request.session.get("el_pedido")
+        if el_pedido:
+            cantidad = el_pedido.get(producto)
+            if cantidad:
+                el_pedido[producto]=cantidad+1
+            else:
+                el_pedido[producto]=1
+        else:
+            el_pedido={}
+            el_pedido[producto]=1
+
+        request.session["el_pedido"]=el_pedido
+        print(request.session["el_pedido"])
+
+        return redirect("templatetags1")
+
+
 

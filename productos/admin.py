@@ -25,13 +25,21 @@ class ProductoAdmin(admin.ModelAdmin):
             "Datos generales",
             {
                 "fields": [
-                    'fecha_publicacion', 'producto', 'estado' , 'imagen', 'precio'
+                    'fecha_publicacion', 'producto', 'estado' , 'imagen', 'descripcion'
+                ]
+            },
+        ),
+        (
+            "Datos economicos",
+            {
+                "fields": [
+                    'precio', 'stock', 'descuento'
                 ]
             },
         ),
 
     ]
-    list_display = ['producto', 'fecha_publicacion', 'tipo_de_producto', 'imagen', 'precio']
+    list_display = ['producto', 'fecha_publicacion', 'tipo_de_estado', 'imagen', 'precio']
     ordering = ['-fecha_publicacion']
     list_filter = ('producto', 'fecha_publicacion',)
     search_fields=('producto', 'estado',)
