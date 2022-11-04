@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% load static %}
+{% load mi_tienda %}
 {% block contenedor %}
 
 <script type="text/javascript" src={% static "js/jquery.js" %}></script>
@@ -83,7 +84,7 @@
 <div class="container">
     <div class="row" >
         <div class="col-12 color1" style="padding-top: 70px;">
-            <h1>Vpy a ver el uso de Session</h1>     
+            <h1>Voy a ver el uso de Session</h1>     
         </div>
             
         {% for producto in los_productos %}
@@ -92,14 +93,14 @@
                 <img src="/media/{{producto.imagen}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{producto.producto}}</h5>
-                    <p class="card-text">{{producto.descripcion|slice:":95"}} 
-                    </p>
+                    <p class="card-text">{{producto.descripcion|slice:":95"}}</p>
+                    <span>{{producto|en_pedido:request.session.el_pedido}}</span>
                     <hr/>
                     <form action="/templatetags1" method="post">{% csrf_token %}
                         <input hidden type="text" name="producto" value="{{producto.id}}">
                         <input type="submit" class="float-rigth  btn btn-primary" value="Agregar"/>
 
-                  </form>
+                    </form>
                 </div>
             </div>
         </div>
