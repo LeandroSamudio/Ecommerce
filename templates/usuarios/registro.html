@@ -3,39 +3,35 @@
 {% load static %}
 {% load i18n %}
 {% block contenedor %}
-<!-- ---------------------------------------------------------------------------
--------------- 
-------------------------------------------------------------------------------->
- <div class="container">
+
+<div class="container">
 
 </div> 
-     
- <div class="container-fluid"   >
+
+<div class="container-fluid"   >
     <div class="row reflexion justify-content-around align-items-center" style="padding-top:20px;">   
         <div class="col-12 col-md-5 contacto_form" style="padding-bottom:15px;">
-                    <h1 class="h1juan" style="padding-left:15px;">Hola estoy en registro</h1>    
-                    
+            <h1 class="h1juan" style="padding-left:15px;">Hola estoy en registro</h1>    
+            <form method="POST" action="">{% csrf_token %}
+                {{form}}
+            <button type="submit" class="btn btn-danger float-rigth">
+                registrar
+            </button>
         </div>    
-         
-     </div>
- </div>  
+    </div>
+</div>  
 
-    
+
+
 <section class="container-fluid ">
     <div class="row" style="padding-top:10px; ">
         <div class="col-12" style="padding:0px;  ">
-           <br/> 
+            <br/> 
         </div>
     </div>
 </section>
-   
-  
+
 
 
 
 {% endblock %}
-
-	
-	
-	
- 
