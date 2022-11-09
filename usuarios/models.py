@@ -5,7 +5,7 @@ import time
 
 class Datosusuario(models.Model):
     
-    usuario = models.ForeignKey(User, blank=False, null=True, on_delete=models.CASCADE)
+    usuario = models.OneToOneField(User, blank=False, null=True, on_delete=models.CASCADE)
     imagen = models.ImageField(upload_to='producto/%y/%m/%d', default='defecto/defecto.png', blank=True, null=True)
     
     
