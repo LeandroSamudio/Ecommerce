@@ -3,7 +3,6 @@ from productos.models import Categoria
 from productos.models import Producto
 
 
-
 admin.site.site_header= "Templo 3D Admin"
 admin.site.site_title= "Tempro 3D Admin"
 admin.site.index_title= "Bienvenido al portal de administracion"
@@ -14,6 +13,10 @@ class ProductoInline(admin.TabularInline):
 
 class CategoriaAdmin(admin.ModelAdmin):
     inlines = [ProductoInline]
+
+
+
+
 
 @admin.register(Producto)
 class ProductoAdmin(admin.ModelAdmin):
@@ -39,11 +42,27 @@ class ProductoAdmin(admin.ModelAdmin):
         ),
 
     ]
+    actions=["publicar", "borrador", "retirado",]
     list_display = ['producto', 'fecha_publicacion', 'tipo_de_estado', 'imagen', 'precio']
     ordering = ['-fecha_publicacion']
     list_filter = ('producto', 'fecha_publicacion',)
     search_fields=('producto', 'estado',)
     list_display_links = ('producto', 'fecha_publicacion',)
+
+    def publicar(self, request, queryset):
+        queryset.update(estado=Producto.Borrador)
+
+    publicar.short_description = "Pasar a publicado"
+
+    def borrador(self, request, queryset):
+        queryset.update(estado=Producto.Publicado)
+
+    borrador.short_description = "publicar sin stock"
+
+    def retirado(self, request, queryset):
+        queryset.update(estado=Producto.Retirado)
+
+    retirado.short_description = "Sacar de publicado"
 
     @admin.display(description='Name')
     def upper_case_name(self, obj):

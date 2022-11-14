@@ -22,7 +22,7 @@ class Producto(models.Model):
         (Retirado, 'Sin publicar'),
     )
     estado = models.CharField(
-        max_length=15, choices=APROBACION_PRODUCTO, default='Sin publicar'
+        max_length=15, choices=APROBACION_PRODUCTO, default='Publicado'
         )
 
     producto = models.CharField(max_length=200)
@@ -40,7 +40,7 @@ class Producto(models.Model):
     descuento = models.IntegerField(default=0)
 
     
-    def tipo_de_estado(self):
+    def tipo_de_estado(self,):
         if self.estado == 'En Stock':
             return format_html('<span style="color: #0d0;">{}</span>', self.estado, )
         elif self.estado == 'Sin Stock':
