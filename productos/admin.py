@@ -3,6 +3,7 @@ from productos.models import Categoria
 from productos.models import Producto
 from django.http import HttpResponse
 from django.core import serializers
+from django.shortcuts import render
 
 
 admin.site.site_header= "Templo 3D Admin"
@@ -44,7 +45,7 @@ class ProductoAdmin(admin.ModelAdmin):
         ),
 
     ]
-    actions=["publicar", "borrador", "retirado", "exportar_a_json"]
+    actions=["publicar", "borrador", "retirado", "exportar_a_json", "ver_productos"]
     list_display = ['producto', 'fecha_publicacion', 'tipo_de_estado', 'imagen', 'precio']
     ordering = ['-fecha_publicacion']
     list_filter = ('producto', 'fecha_publicacion',)
@@ -106,7 +107,13 @@ class ProductoAdmin(admin.ModelAdmin):
         serializers.serialize("json", queryset, stream=response)
         return response
 
+    def ver_productos(self, request, queryset):
+        params={}
+        productos = Producto.objects.all
+        params["productos"]=productos
+        return render(request, "admin/productos/productos.html", params)
 
+    ver_productos.short_description = "Ver productos"
 
 
     @admin.display(description='Name')
