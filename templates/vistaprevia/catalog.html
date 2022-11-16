@@ -4,41 +4,56 @@
 {% load static %}
 {% block contenedor %}
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
+
+
+
+<!-- 
+<div class="container">
+{% for producto in los_productos %}
+
+  <div class="col-12 col-lg-4">
+      <div class="card" style="width: 18rem;">
+          <img src="/media/{{producto.imagen}}" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">{{producto.producto}}</h5>
+              <p class="card-text">{{producto.descripcion|slice:":95"}}</p>
+              
+              <hr/>
+              <form action="/templatetags1" method="post">{% csrf_token %}
+                  <input hidden type="text" name="producto" value="{{producto.id}}">
+                  <input type="submit" class="float-rigth  btn btn-primary" value="Agregar"/>
+
+              </form>
+          </div>
+      </div>
+  </div>
+
+{% endfor %}
+</div> -->
+
+<div class="container">
+  <div class="row">
+{% for producto in los_productos %}
   
-                  <div class="card" >
-                    <img src="/media/producto2.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Nombre Producto</h5>
-                      <p class="card-text">Descripcion del producto</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                  </div>
-      </div>
-      <div class="col">
-        <div class="card" >
-                    <img src="/media/producto1.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Nombre Producto</h5>
-                      <p class="card-text">Descripcion del producto</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                  </div>
-      </div>
-      <div class="col">
-        <div class="card" >
-                    <img src="/media/producto3.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Nombre Producto</h5>
-                      <p class="card-text">Descripcion del producto</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
-                    </div>
-                  </div>
+  <div class="col-12 col-lg-4">
+    <div class="card" >
+      <img src="/media/{{producto.imagen}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{producto.producto}}</h5>
+        <p class="card-text">{{producto.descripcion|slice:":95"}}</p>
+        <hr/>
+            <form action="/templatetags1" method="post">{% csrf_token %}
+                <input hidden type="text" name="producto" value="{{producto.id}}">
+                <input type="submit" class="float-rigth  btn btn-primary" value="Agregar"/>
+            </form>
       </div>
     </div>
-  </div>
+  </div>       
+    
+{% endfor %}
+</div>
+</div>
+
   
   
   

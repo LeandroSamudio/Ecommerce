@@ -15,14 +15,19 @@ def index(request):
 """
 def index(request):
     params = {}
-    producto = Producto.objects.filter
+    producto = Producto.objects.all
     params['producto']=producto
     params['nombre_sitio'] = 'Libros Online'
     return render(request, 'vistaprevia/index.html', params)
 
 
 def catalog(request):
-    return render(request, "vistaprevia/catalog.html")
+    params={}
+    producto = Producto.objects.filter(
+            Q(estado="En Stock")
+        )
+    params["los_productos"]=producto
+    return render(request, "vistaprevia/catalog.html", params)
 
 def contacto(request):
     return render(request, "vistaprevia/contacto.html")
@@ -43,7 +48,7 @@ class Templatetags1(View):
             </script>
         """
         producto = Producto.objects.filter(
-            Q(estado="Sin publicar")
+            Q(estado="En Stock")
         )
         params["los_productos"]=producto
 
