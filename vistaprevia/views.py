@@ -15,6 +15,8 @@ def index(request):
 """
 def index(request):
     params = {}
+    producto = Producto.objects.filter
+    params['producto']=producto
     params['nombre_sitio'] = 'Libros Online'
     return render(request, 'vistaprevia/index.html', params)
 
