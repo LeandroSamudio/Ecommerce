@@ -1,5 +1,5 @@
 from django.urls import path
-from usuarios import views
+from vistaprevia import views
 from usuarios import views_login
 from usuarios import views_logout
 from usuarios import views_registro
