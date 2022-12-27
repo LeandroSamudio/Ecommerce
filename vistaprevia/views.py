@@ -9,6 +9,58 @@ from django.views.generic import View
 import datetime
 
 from django.shortcuts import redirect
+
+from tienda.forms import SearchProductForm
+import json
+from django.http import HttpResponse
+
+def para_ajax(request):
+    params={}
+    search=SearchProductForm()
+    params['search']=search
+    return render(request, 'vistaprevia/ver_ajax.html', params)
+
+class BuscarProducto(View):
+    def get(self, request):
+        if request.is_ajax:
+            palabra=request.GET.get('term', '')
+            print(palabra)
+            libro=Producto.objects.filter(producto__icontains=palabra)
+            result=[]
+            for an in libro:
+                data={}
+                data['label']=an.producto
+                result.append(data)
+            data_json=json.dumps(result)
+        else:
+            data_json="fallo"
+        mimetype="application/json"
+        return HttpResponse(data_json, mimetype)
+
+class BuscarProducto2(View):
+    def get(self, request):
+        if request.is_ajax:
+            q = request.GET['valor']
+            libro = Producto.objects.filter(producto__icontains=q)
+            results = []
+            for rec in libro:
+                print(rec.producto)
+                print(rec.estado)
+                print(rec.imagen)
+
+                data = {}
+                data['producto'] = rec.producto
+                data['estado'] = rec.estado
+                data['ruta_imagen'] = str(rec.imagen)
+                results.append(data)
+            data_json = json.dumps(results)
+
+        else:
+            data_json = "fallo"
+        mimetype = "application/json"
+        return HttpResponse(data_json, mimetype)
+
+
 """
 def index(request):
     return HttpResponse("Hola Mundo!")

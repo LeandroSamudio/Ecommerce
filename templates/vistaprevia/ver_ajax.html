@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block contenedor %}
+
+<div class="container">
+  <div class="row">
+      <div class="col-12 prueba" style="padding-top:200px;">
+
+      </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+      <div class="col-12 prueba">
+        <section id="todos_los_productos" class ="row" >
+            <h2>Seleccionar producto</h2>
+            <hr/>
+            <div id="contenedor_filtros" class="row">
+               <div id="filtros_productos"  class="col-xs-12">
+                   <form id="searchr-form"   action="" method="post" >{% csrf_token  %}
+                       <div class="campo_busqueda col-xs-12 "  >
+                           {{ search }}
+                           <input type="button" id="boton_prod" value="Ver datos"/>
+                       </div>
+                    </form>
+               </div>
+            </div>
+            <div id="contenedor_filtrado" class="col-xs-10 col-sm-offset-2 col-sm-8  
+                                              col-md-offset-4 col-md-4 "></div>
+        </section>
+      </div>
+  </div>
+</div>
+<div class="container">
+<div class="row">
+    <div class="col-12 prueba" style="padding-bottom: 250px;">
+       
+    </div>
+</div>
+</div>
+  <div class="container">
+      <div class="row">
+          <div class="col-12 prueba" style="padding-top:200px;">
+ 
+          </div>
+      </div>
+  </div>
+{% endblock  %}
+{% block script %}
+<script type="text/javascript" src="{% static 'js/jquery-ui.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/ajax.js' %}"></script>
+<script type="text/javascript">
+  $( "#id_querycom" ).autocomplete({
+       source:"/buscar_producto/"
+   });
+</script>
+
+
+
+{% endblock  %}
