@@ -99,9 +99,7 @@ class Templatetags1(View):
             });
             </script>
         """
-        producto = Producto.objects.filter(
-            Q(estado="En Stock")
-        )
+        producto = Producto.objects.all()
         params["los_productos"]=producto
 
 

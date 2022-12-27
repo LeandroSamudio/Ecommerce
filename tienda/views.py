@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+from django.db.models import Q
 from productos.models import Producto
 from tienda.forms import CargarForm
 from django.http import Http404
@@ -51,3 +52,22 @@ def ver_imagen(request, producto_id):
     return render(request, "tienda/verimagen.html", params)
 
 
+class EjemploLocalSotage(View): 
+    template = "tienda/localstorage.html"
+
+    def get(self, request):
+        params={}
+        try:
+            productos = Producto.objects.all()
+        except Producto.DoesNotExist:
+            raise Http404
+        params["productos"] = productos
+        # ##########################################################
+        # PARA INICIALIZAR LA VARIABLE DE SESSION CARRO
+        # ###########################################################
+        try:
+            request.session["carro"]
+        except:
+            request.session["carro"] = {}
+            
+        return render(request, self.template, params)
