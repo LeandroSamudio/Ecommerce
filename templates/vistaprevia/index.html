@@ -37,53 +37,56 @@
       </button>
     </div>
   </div>
-  <!-- <div class="col-12" >
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
+  {% for producto in producto %}
 
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/media/Gif1.gif" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>SOMOS REALISTAS, HACEMOS LO IMPOSIBLE</h5>
-            <p>VISITA NUESTRO CATALOGO ONLINE.</p>
-          </div>
+    <div class="col-12 col-lg-4 " id="id{{producto.id}}">
+        <div class="card" style="width: 18rem;">
+            <img src="/media/{{producto.imagen}}" class="card-img-top" alt="...">
+            <div class="card-body" >
+                <h5 class="card-title">{{producto.producto}}</h5>
+                <p class="card-text">{{producto.descripcion|slice:":95"}}</p>
+                <hr/>
+            </div>
         </div>
-
-        <div class="carousel-item">
-          <img src="/media/Gif2.gif" class="w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>SOMOS REALISTAS, HACEMOS LO IMPOSIBLE</h5>
-            <p>VISITA NUESTRO CATALOGO ONLINE</p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="/media/Gif3.gif" class="w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>SOMOS REALISTAS, HACEMOS LO IMPOSIBLE</h5>
-            <p>VISITA NUESTRO CATALOGO ONLINE </p>
-          </div>
-        </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  </div> -->
+  {% endfor %}
+
+
+
+
+
+  <div class="container">
+    <div class="row">
+        <div class="col-12 prueba" style="padding-top:300px;">
+  
+        </div>
+    </div>
+  </div>
+
+
 </div>
 
-
-
 {% endblock  %}
+
+{% block script %}
+
+{% for producto in producto %}
+<script>
+gsap.to("#id{{producto.id}}",{
+  scrollTrigger:{
+    trigger:"#id{{producto.id}}",
+    start:'top 55%',
+    markers:true,
+    end:'bottom 65%',
+    toggleActions:'play continue reverse continue',
+
+
+
+  },
+  rotation:360,
+  x:250,
+  duration:0.5,
+});
+</script>
+{% endfor %}
+{% endblock %}
