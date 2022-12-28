@@ -15,10 +15,20 @@
           <a href="{% url 'ver' producto.id%}">
               <img src="/media/{{producto.imagen}}" style="width: 100%;"/>
           </a>
-          <input type="submit"  hidden class="col-12 vervalor" value="1"/>
-          <input type="submit"  hidden class="col-12 verid" value="utn_{{producto.id}}"/>
-          <button type="button" class="btn btn-primary 
-                                   agregar">{{producto.id}}Agregar</button>
+          <div class="card-body">
+            <h5 class="card-title">{{producto.producto}}</h5>
+            <p class="card-text">{{producto.descripcion|slice:":95"}}</p>
+            
+            <hr/>
+            
+        </div>
+        <input type="submit"  hidden class="col-12 vervalor" value="1"/>
+        <input type="submit"  hidden class="col-12 verid" value="utn_{{producto.id}}"/>
+        <button type="button" class="btn btn-primary agregar">
+            {{producto.id}} Agregar
+        </button>
+        <span></span>
+            
       </div>
       {% endfor %}
   </div>
@@ -84,15 +94,15 @@ $('.agregar').click(function (event) {
     event.preventDefault();
     let cada_producto_id = $(this).parent().find('.verid').val();
     let valor = $(this).parent().find('.vervalor').val();
-    console.log(cada_producto_id);
-    console.log(valor);
+    console.log("cada_producto_id: ", cada_producto_id);
+    console.log("valor: ",valor);
 
     //PASO 1: Remuevo todo item que no inicia con utn_
     let i;
     for(i = 0; i < localStorage.length; i++){
         let clave_eliminar = localStorage.key(i);
         console.log(typeof clave_eliminar);
-        console.log(clave_eliminar);
+        console.log("clave_eliminar: ",clave_eliminar);
         if(!clave_eliminar.startsWith("utn_")){
             console.log("retorna NO verdadero !!!!!!!!!!!!!");
             localStorage.removeItem(clave_eliminar);

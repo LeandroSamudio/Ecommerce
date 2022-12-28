@@ -7,12 +7,7 @@
 <div class="container">
     <div class="row" >
         <div class="col-12 color1" style="padding-top: 70px;">
-            <h1>Estoy en templatetags</h1>     
-            {% autoescape on %}
-                {{ cross_site_scripting }}
-            {% endautoescape %}
-            
-
+            <h1>Estoy en templatetags!</h1>     
         </div>
     </div>
 </div>
@@ -20,7 +15,7 @@
 <div class="container">
     <div class="row" >
         <div class="col-12 color1" style="padding-top: 70px;">
-            <h1>Hola estoy trabajando con comentarios</h1>     
+            <h1>Hola, estoy trabajando con comentarios.</h1>     
                 <!--
                     Esto es un comentario
                 -->
@@ -36,7 +31,7 @@
 <div class="container">
     <div class="row" >
         <div class="col-12 color1" style="padding-top: 70px;">
-            <h1>Hola estoy viendo cycle</h1>     
+            <h1>Hola, estoy viendo cycle.</h1>     
             <ul>
                 {% for elemento in mi_lista %}
                 <li class="{% cycle 'row1' 'row2' row3 %}">
@@ -51,7 +46,7 @@
 <div class="container">
     <div class="row" >
         <div class="col-12 color1" style="padding-top: 70px;">
-            <h1>Hola estoy viendo listas vacias</h1>     
+            <h1>Hola, estoy viendo listas vacias.</h1>     
             <ul>
                 {% for elemento in mi_lista2 %}
                 <li class="{% cycle 'row1' 'row2' row3 %}">
@@ -59,7 +54,7 @@
                 </li>
                 {% empty %}
                 <li class="{% cycle 'row1' 'row2' row3 %}">
-                    No existen elementos
+                    No existen elementos.
                 </li>
 
                 {% endfor %}
@@ -71,7 +66,7 @@
 <div class="container">
     <div class="row" >
         <div class="col-12 color1" style="padding-top: 70px;">
-            <h1>Hola estoy viendo filtros</h1>     
+            <h1>Hola, estoy viendo filtros.</h1>     
 
             {% filter force_escape|lower %}
                 ESTO TIENE QUE ESTAR EN MINUSCULA
@@ -83,7 +78,7 @@
 <div class="container">
     <div class="row" >
         <div class="col-12 color1" style="padding-top: 70px;">
-            <h1>Voy a ver el uso de Session</h1>     
+            <h1>Voy a ver el uso de Session.</h1>     
         </div>
             
         {% for producto in los_productos %}
@@ -110,7 +105,7 @@
     </div>
 </div>
 
-{% include "descripcion_lateral.html" with nombre="Juan" apellido="Barreto" %}
+{% include "descripcion_lateral.html" with nombre="un asesor" apellido="de compras" %}
 
 <div class="container">
     <div class="row" >
