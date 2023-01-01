@@ -11,26 +11,24 @@
 <div class="container">
   <div class="row">
     {% for producto in productos %}
-      <div class="col-12 col-md-4">
-          <a href="{% url 'ver' producto.id%}">
-              <img src="/media/{{producto.imagen}}" style="width: 100%;"/>
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">{{producto.producto}}</h5>
-            <p class="card-text">{{producto.descripcion|slice:":95"}}</p>
-            
-            <hr/>
-            
+
+        <div class="col-12 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="/media/{{producto.imagen}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{producto.producto}}</h5>
+                    <p class="card-text">{{producto.descripcion|slice:":95"}}</p>
+                    
+                    <hr/>
+                    <input type="submit" class="float-rigth  btn btn-primary" id="id{{producto.id}}mas" value="+"/>
+                    <input type="text" class="" id="contador{{producto.id}}" placeholder="0">
+                    <input type="submit" class="float-rigth  btn btn-primary" id="id{{producto.id}}menos" value="-"/>
+
+
+                </div>
+            </div>
         </div>
-        <input type="submit"  hidden class="col-12 vervalor" value="1"/>
-        <input type="submit"  hidden class="col-12 verid" value="utn_{{producto.id}}"/>
-        <button type="button" class="btn btn-primary agregar">
-            {{producto.id}} Agregar
-        </button>
-        <span></span>
-            
-      </div>
-      {% endfor %}
+    {% endfor %}
   </div>
 </div>
 <div class="container">
@@ -43,9 +41,9 @@
 {% endblock  %}
 
 {% block script %}
-<script src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script> 
+
  
-<script = "text/javascript">
+<script>
 /*jslint browser: true*/
 /*jslint plusplus: true*/
 /*global FormData: false */
@@ -132,6 +130,37 @@ $('.agregar').click(function (event) {
 
 
 
+
+{% for i in productos %}
+
+let cantidadid{{i.id}} = localStorage.getItem("id{{i.id}}");
+console.log(cantidadid{{i.id}});
+if (cantidadid{{i.id}} == null) {
+    localStorage.setItem("id{{i.id}}", 0);
+};
+
+function actualizarContador{{i.id}}(){ 
+    console.log("actualiardor de contadores nasheee");
+    document.getElementById("contador{{i.id}}").value=parseInt(localStorage.getItem("id{{i.id}}"));
+}
+actualizarContador{{i.id}}()
+$('#id{{i.id}}mas').click(function (event) {
+    let cantidadid{{i.id}} = parseInt(localStorage.getItem("id{{i.id}}"));
+    localStorage.setItem("id{{i.id}}", cantidadid{{i.id}}+1);
+    actualizarContador{{i.id}}()
+});
+$('#id{{i.id}}menos').click(function (event) {
+    let cantidadid{{i.id}} = parseInt(localStorage.getItem("id{{i.id}}"));
+    if( cantidadid{{i.id}} > 0){    
+    localStorage.setItem("id{{i.id}}", cantidadid{{i.id}}-1);
+    }
+    actualizarContador{{i.id}}()
+});
+
+
+
+
+{% endfor %}
 
 
 

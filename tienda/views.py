@@ -65,9 +65,6 @@ class EjemploLocalSotage(View):
         # ##########################################################
         # PARA INICIALIZAR LA VARIABLE DE SESSION CARRO
         # ###########################################################
-        try:
-            request.session["carro"]
-        except:
-            request.session["carro"] = {}
+        
             
         return render(request, self.template, params)
